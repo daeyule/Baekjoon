@@ -1,0 +1,23 @@
+//StringTokenizer에 대해
+
+StringTokenizer 클래스란 : 문자열을 구분자를 이용하여 분리할 때 사용할 수 있다
+String : 문자열을  // Tokenizer : 토큰화한다 로 이해하기
+
+StringTokenizer를 생성하는 방법 :
+//1. 띄어쓰기 기준으로 문자열을 분리 : StringTokenzier st = new StringTokenizer(문자열); //(문자열을 띄어쓰기 기준으로 분리)
+//2. 구분자를 기준으로 문자열을 분리 : StringTokenizer st = new StringTokenizer(문자열,구분자);
+
+
+//예시
+import java.util.StringTokenizer;
+
+public class Main {
+public static void main(String[] args)  {
+String str = "오늘!날씨는!맑음";        
+StringTokenizer st = new StringTokenizer(str, "!", true);  
+
+while (st.hasMoreTokens()) {            
+System.out.println(st.nextToken());        
+   }     
+  }
+ }
