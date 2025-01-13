@@ -1,12 +1,15 @@
-
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String word = scanner.nextLine();
-        int n = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println(word.charAt(n-1));
+        String str = br.readLine();
+        int index = Integer.parseInt(br.readLine());
+        System.out.println(str.charAt(index-1));
+
+        br.close();
     }
 }
